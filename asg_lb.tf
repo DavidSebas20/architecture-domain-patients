@@ -326,6 +326,7 @@ resource "aws_cloudwatch_metric_alarm" "cpu_high_alarm" {
   alarm_actions       = [aws_sns_topic.cpu_alarm_topic.arn]
   dimensions = {
     AutoScalingGroupName = aws_autoscaling_group.patient_asg_1.name
+    AutoScalingGroupName = aws_autoscaling_group.patient_asg_2.name
   }
 }
 
